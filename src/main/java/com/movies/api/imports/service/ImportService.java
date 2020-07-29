@@ -1,5 +1,4 @@
 package com.movies.api.imports.service;
-// Imports the Google Cloud client library
 
 import com.movies.api.core.enums.ErrorType;
 import com.movies.api.core.exception.ServiceException;
@@ -42,13 +41,10 @@ public class ImportService {
 
                 final InputStreamReader inputStreamReader = new InputStreamReader(file.getInputStream(), StandardCharsets.UTF_8);
                 reader = new CSVReader(inputStreamReader, SEPARATOR);
-
                 boolean isRatingsTable = Boolean.FALSE;
                 boolean isMoviesTable = Boolean.FALSE;
-
                 int recordNumber = 0;
                 String[] next;
-
                 while ((next = reader.readNext()) != null) {
 
                     if (recordNumber == 0) {

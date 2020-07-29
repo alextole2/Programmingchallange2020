@@ -3,33 +3,29 @@
     <div class="center-row">
          <h6> Ratings list </h6>
     </div>
-    <div class="center-row">
-      <div class="col-sm-6 right_align">
-        <q-input
-          counter
-          outlined
-          bottom-slots
-          maxlength="06"
-          label="Top"
-          v-model="top"
-        >
-          <template v-slot:append>
-            <q-icon
-              v-if="top !== ''"
-              name="close"
-              @click="top = ''"
-              class="cursor-pointer"
-            />
-          </template>
-        </q-input>
-      </div>
-      <div class="col-sm-6 left_align">
-        <q-btn type="submit"
-          label="Search"
-          class="q-mt-md"
-          color="primary"
-          @click="submit()"/>
-      </div>
+    <div class="center-row ratings_flex">
+      <q-input
+        counter
+        outlined
+        bottom-slots
+        maxlength="06"
+        label="Top"
+        v-model="top"
+      >
+        <template v-slot:append>
+          <q-icon
+            v-if="top !== ''"
+            name="close"
+            @click="top = ''"
+            class="cursor-pointer"
+          />
+        </template>
+      </q-input>
+      <q-btn type="submit"
+        label="Search"
+        class="search-btn"
+        color="primary"
+        @click="submit()"/>
     </div>
     <div class="q-pa-md">
       <q-table
@@ -137,12 +133,15 @@ export default {
   .center-row
     display: flex;
     justify-content: center;
-  .right_align
-    float: none;
-    margin-left: auto;
-    margin-right: 5px;
-  .left_align
-    float: none;
-    margin-left: 5px;
-    margin-right: auto;
+  .search-btn
+    margin-top: 10px;
+    margin-bottom: 30px;
+  div.ratings_flex {
+      display: flex;
+      margin: 5px;
+      padding: 5px;
+  }
+  div > * {
+    padding: 0 5px;
+  }
 </style>

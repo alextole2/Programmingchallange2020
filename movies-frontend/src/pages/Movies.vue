@@ -3,9 +3,8 @@
     <div class="center-row">
          <h6> Movies list </h6>
     </div>
-    <div class="center-row">
-      <div class="col-sm-5 start_right_align" >
-        <q-input
+    <div class="center-row movies_flex">
+     <q-input
           counter
           outlined
           bottom-slots
@@ -22,9 +21,7 @@
             />
           </template>
         </q-input>
-      </div>
-      <div class="col-sm-5 center-col">
-        <q-input
+         <q-input
           counter
           outlined
           bottom-slots
@@ -41,14 +38,11 @@
             />
           </template>
         </q-input>
-      </div>
-      <div class="col-sm-2 end_right_align">
         <q-btn type="submit"
           label="Search"
-          class="q-mt-md"
+          class="search-btn"
           color="primary"
           @click="submit()"/>
-      </div>
     </div>
     <div class="q-pa-md">
       <q-table
@@ -187,16 +181,15 @@ export default {
   .center-row
     display: flex;
     justify-content: center;
-  .start_right_align
-    float: none;
-    margin-left: auto;
-    margin-right: none;
-  .center-col
-    float: none;
-    margin-left: auto;
-    margin-right: auto;
-  .end_right_align
-    float: none;
-    margin-left: none;
-    margin-right: auto;
+  .search-btn
+    margin-top: 10px;
+    margin-bottom: 30px;
+  div.movies_flex {
+      display: flex;
+      margin: 5px;
+      padding: 5px;
+  }
+  div > * {
+    padding: 0 5px;
+  }
 </style>

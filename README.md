@@ -51,3 +51,47 @@ You must provide the following artifacts:
 - Show us everything you know about best practices in Git;
 - Think carefully about your code quality, in terms of maintainability, readability, and simplicity;
 - Do not overengineer your solution.
+
+## Environment
+**Backend**
+ * gradle 7
+ * java 8
+ * postgres
+ 
+ *Url: http://localhost:8680
+ 
+**Frontend**
+ * nodejs v12.18.3
+ * yarn v1.22.4
+ * @quasar/cli v1.0.5
+ 
+ *Install:
+   npm install
+   npm i yarn
+   npm install -g quasar-cli
+   
+ *Run: quasar dev
+ *Build: quasar build
+ 
+ *Url: http://localhost:8080
+  
+ ## DB Backup:
+  * movies.backup.
+ 
+ ## Technologies: 
+  * Java RESTful API with Spring Boot Framework.
+  * PostgreSQL database.
+  * Liquibase.
+  * JPA.
+  * Hibernate.
+  * OpenCSV.
+  
+ ## Screenshots: 
+  * Uploading file screenshot.png.  
+  * Movies by year demo screenshot.png.
+  * Movies by year and genre demo screenshot.png.
+  * Top k rated movies.png.
+  
+ ## Notes:
+  * Just was necessary to load two files from [publicly available dataset](http://files.grouplens.org/datasets/movielens/ml-25m.zip).
+  * Those files (movies.csv and ratings.csv) were enough to populate the database and provide the requested on 'Making the Data Available' section.

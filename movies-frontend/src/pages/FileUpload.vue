@@ -3,14 +3,13 @@
     <div class="row center-row">
         <h6> File to upload </h6>
     </div>
-    <div class="row flex-align-center">
+    <div class="row">
       <div class="col-sm-4" />
-      <div class="col-sm-4">
+      <div class="flex">
           <input type="file" id="file" ref="file" v-on:change="handleFileUpload()" />
-          <br>
           <q-btn type="submit"
             label="Save"
-            class="q-mt-md"
+            class="flex-align-center"
             color="primary"
             @click="submitFile()"/>
       </div>
@@ -84,8 +83,13 @@ export default {
   .center-row
     display: flex;
     justify-content: center;
-  .center-col
-    float: none;
-    margin-left: auto;
-    margin-right: auto;
+  div.flex {
+      display: flex;
+      border: 1px solid black;
+      margin: 5px;
+      padding: 5px;
+  }
+  div > * {
+    padding: 0 5px;
+  }
 </style>
